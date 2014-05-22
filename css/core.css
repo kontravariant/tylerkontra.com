@@ -1,25 +1,31 @@
 body {
-    border-radius: 5%;
-    background-color: #E1E5EA;
+    background-color: #FAFAFA;
 }
 
 a {
     color: black;
+    height: 100%;
+    vertical-align: middle;
 }
 
 a:hover {
     color: #608495;
 }
 
+.logo {
+    float: left;
+    vertical-align: middle;
+}
+
 
 .head-contain {
     width: 100%;
-    background-color: rgba(183,  195, 205, .3);
+    
+    background-color: rgba(196,200,202,.8);
     position: fixed;
     z-index: 10;
     top: 0;
     right: 0;
-    border-radius: 5%;
 }
 
 .header {
@@ -37,31 +43,30 @@ a:hover {
     position: relative;
     text-overflow: inherit;
     text-align: right;
-    max-width: 730px;
-    min-width: 400px;
+    max-width: 700px;
     margin: auto;
+    height: 100%;
 }
 
 .head-text-inner {
     padding-right: 10px;
+    height: 40px;
 }
 
 hr {
     position: relative;
-    top: 20px;
+    top: 30px;
+    height: 2px;
+    background-color: #D1D1D6;
 }
 
-.logo {
-    float: left;
-    vertical-align: middle;
-}
 
 #main {
-
 }
 
 .jumbotron {
     position: relative;
+    top: 40px;
     background-color: #F7E1C6;
     height: 475px;
     margin-bottom: 85px;
@@ -71,7 +76,6 @@ hr {
     background-repeat: no-repeat;
     color: white;
     clear: both;
-    top: 40px;
 }
 
 .jumbotron-container {
@@ -87,9 +91,13 @@ hr {
     display: inline-block;
     justify-content: center;  
     align-items: center;
-    margin-top: 15%;
+    margin-top: 23%;
     margin-left: 50px;
     margin-right: 50px;
+}
+
+.jumbo-content p {
+    font-variant: small-caps;
 }
 
 .ab-me-btn {
@@ -105,9 +113,34 @@ hr {
 }
 
 #main {
-    border-radius: 1%;
+    
 }
 
+#cont {
+    width: 730px;
+    margin: auto;
+}
+
+.sechead {
+    font-size: 22px;
+    font-weight: 300;
+    font-variant: small-caps;
+}
+
+h5 {
+    font-size: 16px;
+    font-weight: 200;
+    text-transform: uppercase;
+    position: relative;
+    left: 15px;
+}
+
+h5 ~ p {
+    position: relative;
+    left: 15px;
+}
+
+
 .footer p {
-    color: white;
+    color: rgba(180,195,200, 1);
 }
