@@ -28,7 +28,7 @@
        
     <div id="main-cont"> 
         
-        
+<div id="head-contain">   
     <div class="header" id="header">
         <ul class="nav nav-pills pull-right">
             <li class="actbut">
@@ -49,8 +49,8 @@
             </li>
             <li><a class="first" type="button"
                 onclick="smoothScroll(document.
-                getElementById('photography'))">
-                Photography</a>
+                getElementById('general'))">
+                General</a>
             </li>
             <li><a class="first btn-contact" type="button"
                 onclick="smoothScroll(document.
@@ -67,7 +67,7 @@
         <div class="jumbotron-container">
             <div class="jumbo-content">
                 <h1>Tyler Kontra</h1>
-                <p class="lead">Student | Photographer | Aspiring Chemist</p>
+                <p class="lead"></p>
                 
             </div>
         </div>
@@ -103,10 +103,10 @@
       </div>
 
        
-      <div id="photography" class="row marketing">
-        <a name="photography"></a>
+      <div id="general" class="row marketing">
+        <a name="General"></a>
         <div class="col-lg-12">
-          <h4 class="sechead">Photography</h4>
+          <h4 class="sechead">General</h4>
           <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
 
           <h5>Subheading</h5>
@@ -145,17 +145,18 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 <script type="text/javascript">
+
 $(window).bind("scroll", function () {
     var scroll = $(document).scrollTop().valueOf();
-    var div = document.getElementById("header");
+    var div = document.getElementById("head-contain");
     if (scroll > 490) {
-        div.style.width = '680px';
-        div.style.right = '180px';
-        div.style.left = '120px';
+        div.style.width = '720px';
+        div.style.marginLeft = '-360px';
+        div.style.left = '50%';
     } else {
         div.style.width = '100%';
-        div.style.right = '0';
-        div.style.left = '0';
+        div.style.marginLeft = 'auto';
+        div.style.left = 'auto';
     }
 });
 </script>
