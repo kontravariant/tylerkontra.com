@@ -1,63 +1,58 @@
 body {
-    background-color: #FAFAFA;
+background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top, #ffffff 21%, #ffffff 21%, #e0e0e0 77%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(21%,#ffffff), color-stop(21%,#ffffff), color-stop(77%,#e0e0e0)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #ffffff 21%,#ffffff 21%,#e0e0e0 77%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #ffffff 21%,#ffffff 21%,#e0e0e0 77%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #ffffff 21%,#ffffff 21%,#e0e0e0 77%); /* IE10+ */
+background: linear-gradient(to bottom, #ffffff 21%,#ffffff 21%,#e0e0e0 77%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e0e0e0',GradientType=0 ); /* IE6-9 */
 }
 
 a {
-    color: black;
+    color: white;
     height: 100%;
-    vertical-align: middle;
+}
+
+#home-ref {
+    display: none;
+}
+
+.nav a {
+    border-left: 1px solid white;
+    margin-left: -2px;;
+}
+
+.btn-contact {
+    border-right: 1px solid white;
 }
 
 a:hover {
     color: #608495;
 }
 
-.logo {
-    float: left;
-    vertical-align: middle;
-}
 
-
-.head-contain {
-    width: 100%;
-    
-    background-color: rgba(196,200,202,.8);
+#header {
+    background-color: rgba(0,0,0,.8);
+    height: 40px;
     position: fixed;
-    z-index: 10;
-    top: 0;
-    right: 0;
-}
-
-.header {
-    margin-bottom: -20px;
-    position: fixed;
-    top: -5%;
-    right: 10px;
+    display: inline-block;
+    top: 0px;
+    right: 0px;
     z-index: 10;
     border: none;
-    background-color: #D2E0E0;
-    border-radius: 5%;
-}
-
-.head-text {
-    position: relative;
-    text-overflow: inherit;
-    text-align: right;
-    max-width: 700px;
+    -webkit-transition: width 0.3s;
+    -moz-transition: width 0.3s;
+    transition: width 0.3s;
     margin: auto;
-    height: 100%;
+    padding-right: 50px;
+    width: 100%;
 }
 
-.head-text-inner {
-    padding-right: 10px;
-    height: 40px;
-}
 
-hr {
-    position: relative;
-    top: 30px;
-    height: 2px;
-    background-color: #D1D1D6;
+.header.shrink {
+    width: 500px;
+    margin: auto;
 }
 
 
@@ -66,10 +61,10 @@ hr {
 
 .jumbotron {
     position: relative;
-    top: 40px;
+    top: 20px;
     background-color: #F7E1C6;
     height: 475px;
-    margin-bottom: 85px;
+    margin-bottom: 105px;
     background-image: url(../img/jumbo-bg.jpg);
     background-size: cover;
     background-position: center center;
@@ -142,5 +137,5 @@ h5 ~ p {
 
 
 .footer p {
-    color: rgba(180,195,200, 1);
+    color: white;
 }
