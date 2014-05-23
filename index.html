@@ -8,6 +8,8 @@
         <meta name="description" content="">
         <meta name="author" content="">
         
+        <script src="../js/jquery-2.1.1.min.js"></script>
+        
         <title>TylerKontra.com</title>
         
         <link href="../css/bootstrap.css" rel="stylesheet">
@@ -60,10 +62,7 @@
         </div>
         <!--<h3 class="text logo">tyler kontra</h3>
     --> 
-        
-    </div>
-    </div>
-    </div>
+
       <div class="jumbotron">
         <div class="jumbotron-container">
             <div class="jumbo-content">
@@ -73,6 +72,7 @@
             </div>
         </div>
       </div>
+<div id='bg'>
 <div id="cont">
       <div id="about" class="row marketing">
         <a name="about"></a>
@@ -103,7 +103,7 @@
       </div>
 
        
-      <div id="interests" class="row marketing">
+      <div id="photography" class="row marketing">
         <a name="photography"></a>
         <div class="col-lg-12">
           <h4 class="sechead">Photography</h4>
@@ -131,31 +131,36 @@
           <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         </div>
       </div>
-
-
-      <div class="footer">
-        <p>&copy; Tyler Kontra 2014</p>
-      </div>
 </div>
-    </div> <!-- /container -->
+    </div>
 
+      
+    </div><!-- /container -->
+<div class="footer">
+        <p>&copy; Tyler Kontra 2014</p>
+          
+</div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 <script type="text/javascript">
-(function(){
-      var scroll = $(document).scrollTop().valueOf();
-      var div = document.getElementById("header");
-    if (scroll > 0) {
-        div.style.width = "100px";
+$(window).bind("scroll", function () {
+    var scroll = $(document).scrollTop().valueOf();
+    var div = document.getElementById("header");
+    if (scroll > 490) {
+        div.style.width = '680px';
+        div.style.right = '180px';
+        div.style.left = '120px';
     } else {
-        div.style.width= "100%";
+        div.style.width = '100%';
+        div.style.right = '0';
+        div.style.left = '0';
     }
-  });
+});
 </script>
     
-    <script type="text/javascript">
+<script type="text/javascript">
         
 window.smoothScroll = function(target) {
     var scrollContainer = target;
