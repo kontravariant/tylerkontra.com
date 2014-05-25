@@ -71,10 +71,13 @@ a:hover {
 .jumbotron-container {
     display: inline-block;
     vertical-align: middle;
+    position: relative;
     height:100%;
     padding: 5px;
-    border: .5em solid white;
-    border-radius: 2%
+    <!--border: .5em solid white;
+    border-radius: 2%;-->
+    min-width: 500px;
+    top: -10px;
 }
 
 .jumbo-content {
@@ -145,16 +148,7 @@ h5 ~ p {
     position: relative;
     left: 15px;
 }
-
+    
 .footer {
-    position: absolute;
-    top: 1560px;
-    left: 50px;
-    
-    
-}
-
-.footer p {
-    color: rgba(70,85,100,1);
-    z-index: 4;
+    text-align: center;
 }
