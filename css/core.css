@@ -130,6 +130,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     margin: auto;
 }
 
+h4 {
+    text-decoration: underline;
+}
+
 .sechead {
     font-size: 22px;
     font-weight: 300;
@@ -147,6 +151,16 @@ h5 {
 h5 ~ p {
     position: relative;
     left: 15px;
+}
+
+h6 {
+    position: relative;
+    left: 15px;
+    font-size: 14px;
+}
+
+.mail {
+    color: inherit;
 }
     
 .footer {
