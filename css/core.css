@@ -160,7 +160,8 @@ h6 {
 }
 
 .mail {
-    color: inherit;
+    color: #608495;
+    text-decoration: underline;
 }
     
 .footer {
