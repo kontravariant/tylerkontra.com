@@ -13,6 +13,14 @@ body {
     
 }
 
+.flag {
+    display: inline;
+    margin-left: 50px;
+    top: 50px;
+    color: yellow;
+    font-size: 12px;
+}
+
 #home-ref {
     display: none;
 }
