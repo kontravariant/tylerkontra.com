@@ -1,11 +1,15 @@
 body {
+    margin: auto;
+    padding: 0;
+    
 
 }
 
-a {
+.header a {
     color: white;
     height: 100%;
     font-family: trebuchet ms;
+    border-left: 1px solid white;
     
 }
 
@@ -13,53 +17,14 @@ a {
     display: none;
 }
 
-.nav a {
-    border-left: 1px solid white;
-    margin-left: -2px;
-}
-
-.btn-contact {
+.conlink {
     border-right: 1px solid white;
 }
 
-a:hover {
-    color: #4C6876;
-}
-
-#head-contain {
-    position: fixed;
-    height: 40px;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    -webkit-transition: all 0.6s linear;
-    -moz-transition: all 0.6s linear;
-    transition: all 0.6s linear;
-    
-}
-
-#header {
-    background-color: rgba(19,62,95,.8);
-    height: 40px;
-    display: inline-block;
-    z-index: 10;
-    border: none;
-    -webkit-transition: all 0.25s;
-    -moz-transition: all 0.25s;
-    transition: all 0.25s;
-    padding-right: 50px;
-    width: 100%;
-}
-
-
-
-
-
 .jumbotron {
     position: fixed;
-    top: 40px;
-    height: 475px;
+    top: 0;
+    height: 550px;
     margin-bottom: 105px;
     background-image: url(../img/jumbo-bg1.jpg);
     background-size: cover;
@@ -74,11 +39,10 @@ a:hover {
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    height:100%;
+    height: 100%;
     padding: 5px;
     <!--border: .5em solid white;
     border-radius: 2%;-->
-    min-width: 500px;
     top: -10px;
 }
 
@@ -86,80 +50,59 @@ a:hover {
     display: inline-block;
     justify-content: center;  
     align-items: center;
-    margin-top: 25%;
+    margin-top: 35%;
     margin-left: 50px;
     margin-right: 50px;
 }
 
-.jumbo-content p {
-    font-variant: small-caps;
-}
-
-.ab-me-btn {
-    background-color: white;
-    color: #a3bdca;
-    border: 1px solid black;
-}
-
-.ab-me-btn:hover {
-     background-color: #E1E5EA;
-    color: black;
-    border: 3px solid white;
-}
 
 #bg {
-    clear: both;
-    display: block;
     position: relative;
-    top: 475px;
-    width: 100%;
+    top: 550px;
     height: 100%;
+    width: 100%;
     background-color: #B4D6EE;
+    margin: auto;
 
 }
 
 #cont {
     padding-top: 85px;
     z-index: 5;
-    width: 730px;
     margin: auto;
+    max-width: 95%;
     font-family: gill sans;
 }
 
-h4 {
-    text-decoration: underline;
-}
-
 .sechead {
-    font-size: 22px;
+    font-size: 38px;
     font-weight: 300;
     font-variant: small-caps;
 }
 
 h5 {
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 200;
     text-transform: uppercase;
     position: relative;
-    left: 15px;
 }
 
-h5 ~ p {
+li {
     position: relative;
-    left: 15px;
+    font-size: 20px;
 }
 
-h6 {
+h6, p {
     position: relative;
-    left: 15px;
-    font-size: 14px;
+    font-size: 20px;
+    max-width: 100%;
 }
 
 .mail, .flickr {
     color: #4C6876;
     text-decoration: underline;
 }
-    
+
 .footer {
     text-align: center;
 }

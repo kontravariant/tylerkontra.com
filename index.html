@@ -15,6 +15,7 @@
 
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../css/navigataur.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/core.css">
 
 </head>
@@ -28,7 +29,7 @@
     </div>
 
     <div id="main-cont">
-
+<!--
         <div id="head-contain">
             <div class="header" id="header">
                 <ul class="nav nav-pills pull-right">
@@ -56,8 +57,25 @@
                     Contact</a>
                     </li>
                 </ul>
-            </div>
+            </div> -->
         </div>
+    <div class="header">  
+    <input type="checkbox" id="toggle" />
+        <div>
+            <label for="toggle" class="toggle" data-open="Main Menu" data-close="Close Menu" onclick></label>
+            
+                <ul class="menu"> 
+                        <li class="link conlink"><a class="first btn-contact" type="button" onclick="smoothScroll(document.
+                        getElementById('contact'))">Contact</a></li>
+                      <li class="link"><a class="first btn-contact" type="button" onclick="smoothScroll(document.
+                        getElementById('general'))">General</a></li>
+                      <li class="link"><a class="first btn-contact" type="button" onclick="smoothScroll(document.
+                        getElementById('resume'))">Resume</a></li>    
+                      <li class="link"><a class="first btn-contact" type="button" onclick="smoothScroll(document.
+                        getElementById('about'))">About</a></li>
+                    </ul>
+        </div>
+        </div>  
 
         <div class="jumbotron">
             <div class="jumbotron-container">
@@ -84,38 +102,36 @@
                 <div id="resume" class="row marketing">
                     <a name="resume"></a>
                     <div class="col-lg-12">
-                        <h4 class="sechead">Resume</h4>
+                        <h4 class="sechead reshead">Resume</h4>
                         <p>I plan on joining a research team beginning my sophomore year, hoping to work with prion and amyloid protein analysis.</p>
 
                         <h5>Work Experience</h5>
-                        <ul>
-                            <li>Best Buy, Sales Specialist: 2012-present</li>
-                            <li>Upper Merion Parks and Recreation, Swim Instructor: 2011-2012</li>
-                        </ul>
+                            <ul class="conlist">
+                                <li>Best Buy, Sales Specialist: 2012-present</li>
+                                <li>Upper Merion Parks and Recreation, Swim Instructor: 2011-2012</li>
+                            </ul>
 
                         <h5>Education</h5>
-                        <ul>
-                            <li>Upper Merion Area High School, 2013</li>
-                        </ul>
+                            <ul class="conlist">
+                                <li>Upper Merion Area High School, 2013</li>
+                            </ul>
 
                         <h5>Skills and Interests</h5>
-                        <ul>
-                            <li>Computer Science</li>
-                            <ul>
-                                <li>Proficient in HTML, CSS, Javascript/jQuery, python</li>
+                            <ul class="conlist">
+                                <li>Computer Science</li>
+                                    <li>Proficient in HTML, CSS, Javascript/jQuery, python</li>
                             </ul>
                             <li>Photography</li>
-                            <ul>
+                            <ul class="conlist">
                                 <li>Digital, Olympus Pen E-M2, Olympus 18-42 (MFT) lens</li>
                                 <li><a class="flickr" href="https://www.flickr.com/photos/124847808@N08/">Check out my Flickr photostream</a></li>
                             </ul>
-                            <li>Other</li>
-                            <ul>
-                                <li>Skiing</li>
-                                <li>Golf</li>
-                                <li>Surfing</li>
-                            </ul>
-                        </ul>
+                                <li>Other</li>
+                                    <ul class="conlist">
+                                        <li>Skiing</li>
+                                        <li>Golf</li>
+                                        <li>Surfing</li>
+                                    </ul>
 
                     </div>
                 </div>
@@ -197,7 +213,7 @@ $(window).bind("scroll", function () {
         var targetY = 0;
         do { //find the top of target relatively to the container
             if (target == scrollContainer) break;
-            targetY += target.offsetTop - 25;
+            targetY += target.offsetTop - 45;
         } while (target = target.offsetParent);
 
         scroll = function(c, a, b, i) {
