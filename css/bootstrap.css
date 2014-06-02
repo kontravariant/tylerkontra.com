@@ -61,7 +61,6 @@ dfn {
 }
 h1 {
   margin: .67em 0;
-  font-size: 2em;
 }
 mark {
   color: #000;
@@ -435,7 +434,6 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 36px;
 }
 h2,
 .h2 {
@@ -4389,7 +4387,6 @@ a.list-group-item.active > .badge,
   }
   .jumbotron h1,
   .jumbotron .h1 {
-    font-size: 63px;
   }
 }
 .thumbnail {

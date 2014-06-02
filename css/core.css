@@ -1,3 +1,12 @@
+@font-face { font-family: Ubuntu; src: url('../fonts/Ubuntu-R.ttf'); } 
+@font-face { font-family: Ubuntu Mono; src: url('../fonts/UbuntuMono-R.ttf'); } 
+@font-face { font-family: Ubuntu Light; src: url('../fonts/Ubuntu-L.ttf'); }
+@font-face { font-family: Ubuntu Compact; src: url('../fonts/Ubuntu-C.ttf'); } 
+@font-face { font-family: Oswald; src: url('../fonts/Oswald-Regular.otf'); } 
+@font-face { font-family: Oswald Light; src: url('../fonts/Oswald-Light.otf'); } 
+
+
+
 body {
     margin: auto;
     padding: 0;
@@ -8,7 +17,7 @@ body {
 .header a {
     color: white;
     height: 100%;
-    font-family: trebuchet ms;
+    font-family: Oswald Light;
     border-left: 1px solid white;
     
 }
@@ -38,7 +47,6 @@ body {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    color: white;
     width: 100%;
     z-index: -1;
 }
@@ -58,9 +66,12 @@ body {
     display: inline-block;
     justify-content: center;  
     align-items: center;
-    margin-top: 35%;
+    margin-top: 24%;
     margin-left: 50px;
     margin-right: 50px;
+    color: white;
+    font-family: Ubuntu Light;
+    font-size: 43px;
 }
 
 
@@ -83,6 +94,7 @@ body {
 }
 
 .sechead {
+    font-family: Oswald;
     font-size: 38px;
     font-weight: 300;
     font-variant: small-caps;
@@ -91,19 +103,42 @@ body {
 h5 {
     font-size: 24px;
     font-weight: 200;
+    font-family: gill sans;
     text-transform: uppercase;
     position: relative;
 }
 
-li {
+.conlist {
+}
+
+.sublist {
     position: relative;
+    left: 10px;
+}
+
+h5, h6, p, .conlist {
+    position: relative;
+    left: 35px;
+    width: 90%;
+    font-family: Roboto Slab;
+}
+
+li {
     font-size: 20px;
 }
 
+p {
+    
+}
+
+
 h6, p {
-    position: relative;
     font-size: 20px;
-    max-width: 100%;
+}
+
+h6 {
+    position: relative;
+    
 }
 
 .mail, .flickr {
@@ -112,5 +147,7 @@ h6, p {
 }
 
 .footer {
+    margin: auto;
+    width: 50%;
     text-align: center;
 }
