@@ -2,10 +2,10 @@
 @font-face { font-family: Ubuntu Mono; src: url('../fonts/UbuntuMono-R.ttf'); } 
 @font-face { font-family: Ubuntu Light; src: url('../fonts/Ubuntu-L.ttf'); }
 @font-face { font-family: Ubuntu Compact; src: url('../fonts/Ubuntu-C.ttf'); } 
-@font-face { font-family: Oswald; src: url('../fonts/Oswald-Regular.otf'); } 
-@font-face { font-family: Oswald Light; src: url('../fonts/Oswald-Light.otf'); } 
-
-
+<!-- 
+Lato, 300-400-700
+Oxygen, 400-700
+-->
 
 body {
     margin: auto;
@@ -15,7 +15,8 @@ body {
 .header a {
     color: white;
     height: 100%;
-    font-family: Oswald Light;
+    font-family: Ubuntu LIght;
+    font-weight: 300;
     border-left: 1px solid white;
     
 }
@@ -55,20 +56,17 @@ body {
     position: relative;
     height: 100%;
     padding: 5px;
-    <!--border: .5em solid white;
-    border-radius: 2%;-->
-    top: -10px;
 }
 
 .jumbo-content {
     display: inline-block;
     justify-content: center;  
     align-items: center;
-    margin-top: 24%;
+    margin-top: 28%;
     margin-left: 50px;
     margin-right: 50px;
     color: white;
-    font-family: Ubuntu Light;
+    font-family: Ubuntu;
     font-size: 43px;
 }
 
@@ -94,7 +92,8 @@ body {
 }
 
 .sechead {
-    font-family: Oswald;
+    font-family: Oxygen;
+    font-weight: 400;
     font-size: 38px;
     font-variant: small-caps;
 }
@@ -140,11 +139,12 @@ a.button > span {
 }
 
 
-h5, h6, p, .conlist {
+h5, p, .conlist {
     position: relative;
     left: 35px;
     width: 90%;
-    font-family: Oswald Light;
+    font-family: Lato;
+    font-weight: 300;
 }
 
 li {
@@ -162,7 +162,8 @@ h6, p {
 
 h6 {
     position: relative;
-    
+    left: 35px;
+    font-family: Ubuntu light;
 }
 
 .mail, .flickr {
@@ -174,4 +175,5 @@ h6 {
     margin: auto;
     width: 50%;
     text-align: center;
+    font-family: Oxygen;
 }
