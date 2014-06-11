@@ -3,6 +3,7 @@
 
 <head>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700|Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Nobile:400,700' rel='stylesheet' type='text/css'>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +12,6 @@
 
     <script src="../js/jquery-2.1.1.min.js">
     </script>
-
     <title>TylerKontra.com</title>
 
     <link href="../css/bootstrap.css" rel="stylesheet">
@@ -25,41 +25,10 @@
 -->
 
 
-<body>
+<body data-spy"scroll" data-target=".menu">
     <div id="home-ref">
     </div>
 
-    <div id="main-cont">
-<!--
-        <div id="head-contain">
-            <div class="header" id="header">
-                <ul class="nav nav-pills pull-right">
-                    <li class="actbut">
-                        <a class="first" type="button" onclick="
-               smoothScroll(document.
-               getElementById('home-ref'))">
-                    Home</a>
-                    </li>
-                    <li><a class="first" type="button" onclick="
-               smoothScroll(document.
-               getElementById('about'))">
-                    About</a>
-                    </li>
-                    <li><a class="first" type="button" onclick="smoothScroll(document.
-                getElementById('resume'))">
-                    Resume</a>
-                    </li>
-                    <li><a class="first" type="button" onclick="smoothScroll(document.
-                getElementById('general'))">
-                    General</a>
-                    </li>
-                    <li><a class="first btn-contact" type="button" onclick="smoothScroll(document.
-                getElementById('contact'))">
-                    Contact</a>
-                    </li>
-                </ul>
-            </div> -->
-        </div>
     
     
     <div class="header">  
@@ -250,7 +219,8 @@ $(window).bind("scroll", function () {
 });
 </script>
      -->
-
+    
+    
     <script type="text/javascript">
     window.smoothScroll = function(target) {
         var scrollContainer = target;
@@ -279,12 +249,5 @@ $(window).bind("scroll", function () {
         // start scrolling
         scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
     }
-    </script>
-
-    <script type="text/javascript">
-    function getCurrentScroll() {
-        return window.pageYOffset;
-    }
-    });
     </script>
 </body>

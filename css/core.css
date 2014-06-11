@@ -15,7 +15,8 @@ body {
 .header a {
     color: white;
     height: 100%;
-    font-family: Ubuntu LIght;
+    font-family: Oxygen;
+    letter-spacing: .06em;
     font-weight: 300;
     border-left: 1px solid white;
     
@@ -62,12 +63,13 @@ body {
     display: inline-block;
     justify-content: center;  
     align-items: center;
-    margin-top: 28%;
+    margin-top: 25%;
     margin-left: 50px;
     margin-right: 50px;
-    color: white;
-    font-family: Ubuntu;
+    color: #FFF;
+    font-family: Nobile;
     font-size: 43px;
+    letter-spacing: 10px;
 }
 
 
@@ -88,23 +90,21 @@ body {
     padding-left: 65px;
     padding-right: 60px;
     max-width: 700px;
-    font-family: gill sans;
 }
 
 .sechead {
     font-family: Oxygen;
-    font-weight: 400;
     font-size: 38px;
-    font-variant: small-caps;
+    letter-spacing: .02em;
 }
 
 h5 {
     font-size: 24px;
-    font-weight: 200;
-    font-family: gill sans;
-    text-transform: uppercase;
+    font-weight: lighter;
+    font-family: Nobile;
+    letter-spacing: .03em;
     position: relative;
-    text-decoration: underline;
+    text-decoration: ;
 }
 
 .conlist {
@@ -144,8 +144,11 @@ h5, p, .conlist {
     position: relative;
     left: 35px;
     width: 90%;
-    font-family: Lato;
     font-weight: 300;
+}
+
+ul {
+    list-style: inherit;
 }
 
 li {
@@ -155,7 +158,6 @@ li {
 p {
     
 }
-
 
 h6, p {
     font-size: 20px;
@@ -168,8 +170,8 @@ h6 {
 }
 
 .mail, .flickr {
-    color: #4C6876;
-    text-decoration: underline;
+    color: #456ea0;
+    text-decoration: ;
 }
 
 .footer {
