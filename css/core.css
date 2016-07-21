@@ -34,6 +34,11 @@ body {
     display: none;
 }
 
+#resume {
+	width: 100%;
+	list-style-type: none;
+}
+
 .conlink {
     border-right: 1px solid white;
 }
@@ -93,7 +98,7 @@ body {
 }
 
 .sechead {
-    font-family: Georgia;
+    font-family: Oxygen;
     font-size: 38px;
     letter-spacing: .02em;
 }
@@ -154,6 +159,7 @@ ul {
 
 li {
     font-size: 20px;
+    padding: 4px;
 }
 
 p {
@@ -180,4 +186,9 @@ h6 {
     width: 50%;
     text-align: center;
     font-family: Oxygen;
+}
+#memo {
+    width: auto;
+	height: auto;
+	margin-top: -110px;
 }
