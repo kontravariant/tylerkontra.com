@@ -1,0 +1,23 @@
+.container {
+    padding-top: 10%;
+}
+.title {
+    margin-top: 10%;
+    text-align: center;
+    font-size: 4.2em;
+}
+.menu {
+    text-align: center;
+    margin-top: 5%;
+    font-size: 1.6em;
+}
+.menu-anchor {
+    display: block;
+    text-decoration: none;  
+    border: 1px solid;
+    padding: 5%;
+    height: 150px;
+}
+a:hover {
+    color: black;
+}
