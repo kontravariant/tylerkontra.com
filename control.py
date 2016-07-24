@@ -17,7 +17,7 @@ app.debug = True
 
 @app.route('/')
 def root():
-    return app.send_static_file('index.html')
+    return render_template('index.html')
 
 
 @app.route('/<path:path>')
@@ -26,7 +26,7 @@ def static_proxy(path):
 
     return app.send_static_file(path)
 
-@app.route('/pages/projects.html')
+@app.route('/projects.html')
 def projects():
     headers = {'Authorization': 'token %s' \
                                 % '4ddacff158ceb607f1a6740c675e50af6fc5808a'}
@@ -64,6 +64,14 @@ def projects():
 
 
     return render_template('projects.html',repos=res,report=report)
+
+@app.route('/bio.html')
+def bio():
+    return render_template('bio.html')
+
+@app.route('/resume.html')
+def resume():
+    return render_template('resume.html')
 
 if __name__ == '__main__':
     app.run()
