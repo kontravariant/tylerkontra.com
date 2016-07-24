@@ -37,7 +37,6 @@ def projects():
         res.append([repo_name, repo_url, repo_dsc])
         res = sorted(res)
 
-    return render_template('projects.html',repos=res)
     
 
 
@@ -60,7 +59,9 @@ def projects():
 	else:
 	    act = [type, date, repo,'']
 	    report.append(act)
-    print(report)
+
+        
+    return render_template('projects.html',repos=res,report=report)
 
 if __name__ == '__main__':
   app.run()
