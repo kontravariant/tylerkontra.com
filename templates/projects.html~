@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>My Projects</title>
+    <meta content="The portfolio of Tyler Kontra" name="description">
+    <meta content="Tyler Kontra" name="author"><!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel=
+    "stylesheet" type="text/css"><!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="../static/css/normalize.css" rel="stylesheet">
+    <link href="../static/css/skeleton.css" rel="stylesheet">
+    <link href="../static/css/custom.css" rel="stylesheet">
+    <link href="../static/css/hover.css" rel="stylesheet"><!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="../static/img/favicon/ico.png" rel="icon" type="image/png">
+    <!-- animsition.css -->
+    <link href="..//css/animsition.min.css" rel="stylesheet"><!-- jQuery -->
+
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+    </script><!-- animsition.js -->
+
+    <script src="..//js/animsition.min.js">
+    </script>
+</head>
+<body>
+   <div class="animsition">
+    
+    
+   <!--navbar subdir-->
+    <div class="container navbar row">
+        <ul class="navbar-list">
+            <li class="navbar-item">
+                <a class="navbar-link" href="../static/index.html">Home</a>
+            </li>
+            <li class="navbar-item">
+                <a class="navbar-link" href="./projects.html">Projects</a>
+            </li>
+            <li class="navbar-item">
+                <a class="navbar-link" href="../static/pages/resume.html">Resume</a>
+            </li>
+            <li class="navbar-item">
+                <a class="navbar-link" href="../static/pages/bio.html">Bio</a>
+            </li>
+        </ul>
+    </div>
+    
+    
+    <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+       
+    <div class="container main-content animsition">
+        <div class="row">
+            <h1>My Projects</h1>
+            <ul class="repo-list">
+            {% for repo in repos %}
+                <li><a href="{{ repo[1] }}">{{ repo[0] }}</a></li>
+                    <ul>
+                    <li>{{ repo[2] }}</li>
+                    </ul>
+            {% else %}
+                <li>No github projects to report.</li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+    
+    
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->    
+    
+    <!--ANIMSITION JQUERY CALL-->
+    <script>
+        $(document).ready(function() {
+          $(".animsition").animsition({
+            inClass: 'fade-in-left',
+            outClass: 'fade-out',
+            inDuration: 1200,
+            outDuration: 800,
+            linkElement: '.animsition-link',
+            // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+            loading: true,
+            loadingParentElement: 'body', //animsition wrapper element
+            loadingClass: 'animsition-loading',
+            loadingInner: '', // e.g '<img src="loading.svg" />'
+            timeout: false,
+            timeoutCountdown: 5000,
+            onLoadEvent: true,
+            browser: [ 'animation-duration', '-webkit-animation-duration'],
+            // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+            // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+            overlay : false,
+            overlayClass : 'animsition-overlay-slide',
+            overlayParentElement : 'body',
+            transition: function(url){ window.location.href = url; }
+          });
+        });
+    </script>
+ 
+    
+</div>
+</body>
+</html>

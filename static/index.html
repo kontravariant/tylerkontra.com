@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Tyler Kontra</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/hover.css">
+
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="img/favicon/ico.png">
+    
+  <!-- animsition.css -->
+  <link rel="stylesheet" href="/css/animsition.min.css">
+  
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  
+  <!-- animsition.js -->
+  <script src="/js/animsition.min.js"></script>
+
+</head>
+    
+<body>
+
+    
+    
+    
+    <div id="main-menu" class="container animsition">
+        <section class="header">
+            <h2 class="title">Tyler Kontra</h2>
+            
+            <div class="menu row">      
+
+                
+                <a href="/pages/projects.html"
+                   class="four columns menu-anchor hvr-sweep-to-right animsition-link"
+                   data-animsition-out-class="fade-out-right"
+          data-animsition-out-duration="400">
+                    My Projects</a>
+                <a href="pages/resume.html"
+                   class="four columns menu-anchor hvr-sweep-to-top animsition-link"
+                   data-animsition-out-class="fade-out-up"
+          data-animsition-out-duration="400">
+                    My Resume</a>
+                <a href="pages/bio.html"
+                   class="four columns menu-anchor hvr-sweep-to-left animsition-link"
+                   data-animsition-out-class="fade-out-left"
+          data-animsition-out-duration="400">
+                    My Bio</a>
+
+                
+            </div>
+        
+        </section>
+        
+    
+    
+    
+    </div>
+    
+    
+</body>
+    
+    
+    
+<!--ANIMSITION JQUERY CALL-->
+    <script>
+$(document).ready(function() {
+  $(".animsition").animsition({
+    inClass: 'fade-in',
+    outClass: 'fade-out',
+    inDuration: 1200,
+    outDuration: 800,
+    linkElement: '.animsition-link',
+    // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+    loading: true,
+    loadingParentElement: 'body', //animsition wrapper element
+    loadingClass: 'animsition-loading',
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
+  });
+});
+        </script>
+
+</html>
