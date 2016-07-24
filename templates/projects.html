@@ -59,26 +59,17 @@
        
     <div class="container main-content animsition">
         <div class="row">
-            <div class="nine columns">
-                <h1>My Projects</h1>
-                <ul class="repo-list">
-                {% for repo in repos %}
-                    <li><a href="{{ repo[1] }}">{{ repo[0] }}</a></li>
-                        <ul>
-                        <li>{{ repo[2] }}</li>
-                        </ul>
-                {% else %}
-                    <li>No github projects to report.</li>
-                {% endfor %}
-                </ul>
-            </div>
-            <div class="three columns">
-                <ul class="activity-list">
-                {% for event in report %}
-                    <li>{{ event[1] }} @ {{ event[2} }} to {{ event[3} }}: {{ event[4] }}</li>
-                {% endfor %}
-                </ul>
-            </div>
+            <h1>My Projects</h1>
+            <ul class="repo-list">
+            {% for repo in repos %}
+                <li><a href="{{ repo[1] }}">{{ repo[0] }}</a></li>
+                    <ul>
+                    <li>{{ repo[2] }}</li>
+                    </ul>
+            {% else %}
+                <li>No github projects to report.</li>
+            {% endfor %}
+            </ul>
         </div>
     </div>
     
