@@ -44,23 +44,22 @@ def projects():
     req = requests.get(activity_url, headers=headers)
     
     acts = json.loads(req.text)
-    i = 0
     report=[]
     for event in acts:
-	type=(event['type'])
-	date=(event['created_at'])
-	date = datetime.datetime.strptime(date, "%Y-%m-%dT%H:%M:%SZ")
-	date = datetime.datetime.date(date).strftime("%Y-%m-%d")
-	repo=(event['repo']['name']).split('/')[1]
-	if type == 'PullRequestEvent':
-	    title = event['payload']['pull_request']['title']
-	    act = [type, date, repo,title]
-	    report.append(act)
-	else:
-	    act = [type, date, repo,'']
-	    report.append(act)
+        typeind=event['type']
+        date=event['created_at']
+        date = datetime.datetime.strptime(date, "%Y-%m-%dT%H:%M:%SZ")
+        date = datetime.datetime.date(date).strftime("%Y-%m-%d")
+        repo=(event['repo']['name']).split('/')[1]
+        if typeind == 'PullRequestEvent':
+            title = event['payload']['pull_request']['title']
+            act = [typeind, date, repo,title]
+            report.append(act)
+    else:
+        act = [typeind, date, repo,'']
+        report.append(act)
 
-        
+
     return render_template('projects.html',repos=res,report=report)
 
 if __name__ == '__main__':
