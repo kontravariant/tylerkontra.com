@@ -1,5 +1,3 @@
-#!/usr/bin/python
-#
 # Flask server, woo!
 #
 
@@ -22,7 +20,6 @@ def static_proxy(path):
   return app.send_static_file(path)
 
 
-# Routes
 @app.route('/pages/projects.html')
 def projects():
 
