@@ -43,8 +43,19 @@ def projects():
 
     activity_url = 'https://api.github.com/users/tylerkontra/events'
     req = requests.get(activity_url, headers=headers)
-    
+
+
+    def id_generator(iter,targets):
+	for k, v in iter.items():
+	    if k in targets:
+		yield v
+	    elif isinstance(v,(dict)):
+		for id_val in id_generator(v,targets):
+		    yield id_val
+
+
     acts = json.loads(req.text)
+    print(acts)
     i = 0
     report=[]
     for event in acts:
@@ -58,7 +69,8 @@ def projects():
 	    act = [type, date, repo,title]
 	    report.append(act)
 	else:
-	    act = [type, date, repo,'']
+	    print(type,date,repo)
+	    act = [type, date, repo]
 	    report.append(act)
     print(report)
 
