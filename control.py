@@ -15,7 +15,6 @@ import datetime
 app = Flask(__name__)
 app.debug = True
 
-
 @app.route('/')
 def root():
     return app.send_static_file('index.html')
@@ -26,7 +25,6 @@ def static_proxy(path):
     # send_static_file will guess the correct MIME type
 
     return app.send_static_file(path)
-
 
 @app.route('/pages/projects.html')
 def projects():
