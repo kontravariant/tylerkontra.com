@@ -1,7 +1,7 @@
 import datetime
 
 import json, requests
-
+'''
 headers = {'Authorization': 'token %s' % '4ddacff158ceb607f1a6740c675e50af6fc5808a'}
 
 
@@ -52,9 +52,29 @@ for event in acts:
         act = [type, date, repo]
         report.append(act)
 print(report)
-'''
+
 
                 print(repo)
                 i += 1
                 print(message)
 '''
+
+headers = {'Authorization': 'token %s' \
+                                % '4ddacff158ceb607f1a6740c675e50af6fc5808a'}
+#REPO TRACKER
+url = 'https://api.github.com/users/tylerkontra/repos'
+res = []
+r = requests.get(url, headers)
+print
+r.text
+data = json.loads(r.text)
+for dict in r.json():
+    fork_ind = dict.get('fork')
+    repo_name = (dict.get('name'))
+    repo_url = dict.get('html_url')
+    repo_dsc = dict.get('description')
+    if fork_ind == False:
+        res.append([repo_name, repo_url, repo_dsc])
+    res = sorted(res)
+
+print(res)
