@@ -67,6 +67,7 @@
 	margin: 0 auto;
 }
 .blog-link-row {
+	width: 40%;
 	display: block;
 	padding-top: 80px;
 }	
