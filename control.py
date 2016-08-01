@@ -26,7 +26,7 @@ def static_proxy(path):
 
     return app.send_static_file(path)
 
-@app.route('/projects.html')
+@app.route('/projects')
 def projects():
     headers = {'Authorization': 'token %s' \
                                 % '4ddacff158ceb607f1a6740c675e50af6fc5808a'}
@@ -62,14 +62,12 @@ def projects():
         act = [typeind, date, repo,'']
         report.append(act)
 
-
     return render_template('projects.html',repos=res,report=report)
 
-@app.route('/bio.html')
+@app.route('/bio')
 def bio():
     return render_template('bio.html')
-
-@app.route('/resume.html')
+@app.route('/resume')
 def resume():
     return render_template('resume.html')
 
