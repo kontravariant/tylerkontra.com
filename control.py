@@ -30,6 +30,7 @@ def static_proxy(path):
 def projects():
     headers = {'Authorization': 'token %s' \
                                 % '4ddacff158ceb607f1a6740c675e50af6fc5808a'}
+#REPO TRACKER
     url = 'https://api.github.com/users/tylerkontra/repos'
     res = []
     r = requests.get(url, headers)
@@ -37,12 +38,17 @@ def projects():
     r.text
     data = json.loads(r.text)
     for dict in r.json():
+        fork_ind = dict.get('fork')
         repo_name = titlecase(dict.get('name'))
         repo_url = dict.get('html_url')
         repo_dsc = dict.get('description')
-        res.append([repo_name, repo_url, repo_dsc])
+        #Only includes non-fork repos, i.e.-my owned repos
+        if fork_ind == False:
+            res.append([repo_name, repo_url, repo_dsc])
         res = sorted(res)
 
+
+#ACTIVITY TRACKER
     activity_url = 'https://api.github.com/users/tylerkontra/events'
     req = requests.get(activity_url, headers=headers)
 
