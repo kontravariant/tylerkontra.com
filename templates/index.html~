@@ -70,7 +70,15 @@
 
                 
             </div>
-        
+	<div class="row blog-link-row">
+	    <div>
+	        <a class="blog-link" href="http://blog.tylerkontra.com">
+			<h5>My Blog</h5>
+		</a>
+	    </div>
+	</div>
+
+
         </section>
         
     
