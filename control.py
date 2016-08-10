@@ -64,9 +64,9 @@ def projects():
             title = event['payload']['pull_request']['title']
             act = [typeind, date, repo,title]
             report.append(act)
-    else:
-        act = [typeind, date, repo,'']
-        report.append(act)
+        else:
+            act = [typeind, date, repo,'']
+            report.append(act)
 
     return render_template('projects.html',repos=res,report=report)
 
