@@ -57,7 +57,6 @@ print(report)
                 print(repo)
                 i += 1
                 print(message)
-'''
 
 headers = {'Authorization': 'token %s' \
                                 % '4ddacff158ceb607f1a6740c675e50af6fc5808a'}
@@ -77,4 +76,26 @@ for dict in r.json():
         res.append([repo_name, repo_url, repo_dsc])
     res = sorted(res)
 
-print(res)
+print(res)'''
+headers = {'Authorization': 'token %s' \
+                                % '4ddacff158ceb607f1a6740c675e50af6fc5808a'}
+activity_url = 'https://api.github.com/users/tylerkontra/events'
+req = requests.get(activity_url, headers=headers)
+
+acts = json.loads(req.text)
+report = []
+for event in acts:
+    typeind = event['type']
+    date = event['created_at']
+    date = datetime.datetime.strptime(date, "%Y-%m-%dT%H:%M:%SZ")
+    date = datetime.datetime.date(date).strftime("%Y-%m-%d")
+    repo = (event['repo']['name']).split('/')[1]
+    if typeind == 'PullRequestEvent':
+        title = event['payload']['pull_request']['title']
+        act = [typeind, date, repo, title]
+        report.append(act)
+    else:
+        act = [typeind, date, repo, '']
+        report.append(act)
+
+print(report)
