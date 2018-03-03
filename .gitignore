@@ -1,6 +1,10 @@
 /HTML5Application/nbproject/private/
 /nbproject/HTML5Application1/nbproject/private/
 
+*.pyc
+*~
+*__pycache__*
+
 # Virtualenv
 # http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
 .Python
