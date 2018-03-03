@@ -1,6 +1,8 @@
 /HTML5Application/nbproject/private/
 /nbproject/HTML5Application1/nbproject/private/
 
+*.idea
+
 *.pyc
 *~
 *__pycache__*
